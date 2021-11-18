@@ -1,0 +1,702 @@
+:root {
+  --black: #17191d;
+}
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  text-decoration: none;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Roboto";
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: 1500px;
+  display: flex;
+}
+
+header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto";
+  height: 90px;
+}
+
+header .container {
+  justify-content: space-between;
+}
+
+.logo {
+  filter: invert(1);
+  cursor: pointer;
+  margin-left: 25px;
+}
+
+.logo img {
+  filter: drop-shadow(0px 0px 10px white);
+}
+
+header a:visited {
+  color: white;
+}
+
+header a {
+  text-decoration: none;
+  text-shadow: 0px 0px 10px black;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  font-weight: bold;
+}
+
+header .menuResponsivo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header .menu li {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 17px;
+  color: white;
+}
+
+.menuR {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.menuPhone {
+  display: flex;
+  flex-direction: row;
+}
+
+.menuR .menuPhone .barras {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  margin-right: 20px;
+  cursor: pointer;
+  top: 0;
+  right: 0px;
+  transition: all ease 0.5s;
+}
+
+.menuR .menuPhone .barras .menuBarra {
+  display: block;
+  width: 25px;
+  height: 4px;
+  margin-bottom: 3px;
+  background-color: white;
+  box-shadow: 0 5px 10px black;
+}
+
+.menuR .menuLista {
+  display: none;
+  width: 0px;
+  height: 100vh;
+  background-color: white;
+  color: black;
+  transition: all ease 0.5s;
+}
+
+.menuR .menuLista li {
+  padding-left: 25px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-weight: 600;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.menuR .menuPhone .menuLista li:hover {
+  background-color: silver;
+}
+
+.menuEscuro {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.3;
+  transition: all ease 0.5s;
+  top: 0;
+}
+
+#bannerP {
+  height: 100vh;
+  background-image: url("../images/banner.png");
+  background-position: center;
+  background-size: cover;
+}
+.darken {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100vh;
+}
+
+#banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#banner .container {
+  justify-content: center;
+  margin: 0 90px;
+}
+
+#banner .banner {
+  display: flex;
+  align-items: center;
+  height: 90vh;
+  width: 1500px;
+}
+
+.texto-banner {
+  color: white;
+  font-family: "Roboto";
+  width: 400px;
+  text-shadow: 0px 0px 30px black;
+  padding: 0 10px;
+}
+
+.texto-banner h1 {
+  font-size: 75px;
+  padding-bottom: 20px;
+}
+
+.texto-banner p {
+  font-size: 20px;
+}
+
+.button-banner {
+  display: inline-block;
+  margin-top: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--black);
+  border-radius: 30px;
+  padding: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  cursor: pointer;
+  color: white;
+  transition: all ease-in-out 0.2s;
+}
+
+.button-banner:hover {
+  letter-spacing: 2px;
+}
+
+.button-bannerR {
+  display: none;
+  margin-top: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #17191d;
+  border-radius: 30px;
+  padding: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+#ad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ad-fundo {
+  padding: 150px 0;
+}
+
+.ad {
+  display: flex;
+  justify-content: center;
+  color: white;
+  width: 100%;
+}
+
+.ad a {
+  color: white;
+  text-decoration: none;
+}
+
+.ad a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.bola {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  box-shadow: 0 10px 30px black;
+}
+
+.conforto {
+  background-image: url("../images/conforto.png");
+  background-size: cover;
+  margin-right: 100px;
+}
+
+.diversidade {
+  background-image: url("../images/diversidade.png");
+  background-size: cover;
+  margin-right: 100px;
+}
+
+.estilo {
+  background-image: url("../images/estilo.png");
+  background-size: cover;
+}
+
+.bola h1 {
+  font-size: 20px;
+}
+
+.button-tenis {
+  display: inline-block;
+  margin-top: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 30px;
+  padding: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  cursor: pointer;
+  margin-top: 45px;
+  transition: all ease-in-out 0.2s;
+}
+
+.button-tenis:hover {
+  letter-spacing: 2px;
+}
+
+.blight {
+  background-color: white;
+  color: black;
+}
+
+.bdark {
+  background-color: var(--black);
+  color: white;
+}
+
+.button-tenisR {
+  display: none;
+}
+
+#conforto,
+#diversidade,
+#estilo {
+  display: flex;
+  justify-content: center;
+  padding: 100px 50px;
+}
+
+#conforto .container,
+#diversidade .container,
+#estilo .container {
+  justify-content: space-evenly;
+}
+
+#estilo {
+  padding-bottom: 0px;
+}
+
+#diversidade .img-banner {
+  order: 1;
+}
+
+#conforto .texto-banner,
+#diversidade .texto-banner,
+#estilo .texto-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: black;
+  text-shadow: 0px 0px 0px black;
+}
+
+#conforto {
+  background-color: #17191d;
+}
+
+#estilo {
+  background-color: var(--black);
+  padding-bottom: 100px;
+}
+
+#conforto .img-banner,
+#diversidade .img-banner,
+#estilo .img-banner {
+  width: 800px;
+}
+
+#conforto {
+  margin: 0px;
+}
+
+#conforto .banner .light,
+#estilo .banner .light {
+  color: white;
+}
+
+#stores {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+}
+
+.stores-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1000px;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+.stores-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+}
+
+.section-title {
+  text-transform: uppercase;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.section-text {
+  font-size: 19px;
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background-color: var(--black);
+  color: white;
+}
+
+.footer-body .container:nth-child(1) {
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 180px;
+}
+
+.contacts-email,
+.contacts-phone,
+.contacts-twitter,
+.contacts-address {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-email p,
+.contacts-phone p,
+.contacts-twitter p,
+.contacts-address p {
+  margin-left: 10px;
+}
+
+.client-menu ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 180px;
+  align-items: center;
+}
+
+.client-menu ul li a {
+  border-bottom: 1px solid white;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  text-align: center;
+}
+
+.newsletter h1 {
+  font-size: 23px;
+  margin-bottom: 15px;
+}
+
+.newsletter p {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.newsletter input {
+  border-radius: 10px;
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+input::placeholder {
+  text-align: center;
+}
+
+.newsletter .button-tenis {
+  width: 120px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border: none;
+  font-family: "Roboto";
+  margin: 0;
+  margin-top: 15px;
+}
+
+footer .container {
+  padding: 20px 0;
+}
+
+.footer-bar {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.copyright {
+  padding-bottom: 20px;
+  margin-left: 50px;
+}
+
+@media (max-width: 1500px) {
+  .container {
+    width: 97vw;
+    margin: 0 15px 0 15px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #banner .banner {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #banner .banner .texto-banner {
+    margin-bottom: 50px;
+  }
+
+  #banner .button-banner {
+    display: none;
+  }
+
+  #banner .button-bannerR {
+    display: inline-block;
+    order: 3;
+    margin-top: 70px;
+    width: calc(100vw - 200px);
+  }
+  #banner .texto-banner p {
+    font-size: 13px;
+  }
+
+  .stores-left {
+    order: 1;
+  }
+
+  #stores .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #map {
+    width: 100vw;
+  }
+
+  .stores-right {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  footer {
+    margin-top: 90px;
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .logo {
+    margin-left: 20px;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .menuR {
+    display: block;
+    color: black;
+  }
+
+  #banner .banner {
+    justify-content: center;
+  }
+
+  #banner .banner .texto-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #banner .banner .texto-banner h1 {
+    font-size: 45px;
+  }
+
+  #banner .banner .texto-banner p {
+    width: 90%;
+  }
+
+  .banner .img-banner img {
+    width: calc(100vw - 50px);
+  }
+
+  .ad {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    margin-top: 30px;
+  }
+
+  .ad .bola {
+    margin: 15px;
+  }
+
+  .ad-fundo {
+    padding: 0;
+    padding-bottom: 30px;
+    margin-top: 0;
+  }
+
+  .button-tenis {
+    width: calc(100vw - 100px);
+    margin-top: 50px;
+  }
+
+  #conforto .banner,
+  #diversidade .banner,
+  #estilo .banner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #conforto .texto-banner,
+  #diversidade .texto-banner,
+  #estilo .texto-banner {
+    margin-bottom: 0px;
+  }
+
+  #conforto .texto-banner h1,
+  #diversidade .texto-banner h1,
+  #estilo .texto-banner h1 {
+    font-size: 45px;
+    padding-top: 75px;
+  }
+
+  #conforto .texto-banner p,
+  #diversidade .texto-banner p,
+  #estilo .texto-banner p {
+    font-size: 15px;
+    max-width: calc(100% - 30px);
+  }
+
+  #diversidade .img-banner {
+    order: 0;
+  }
+
+  #conforto .img-banner img,
+  #diversidade .img-banner img,
+  #estilo .img-banner img {
+    width: 90vw;
+    margin-bottom: 30px;
+  }
+
+  footer {
+    margin-top: 100px;
+    height: 100%;
+  }
+
+  footer .container {
+    flex-direction: column;
+  }
+
+  .container .contacts {
+    align-items: center;
+    order: 3;
+  }
+
+  .container .client-menu {
+    margin-bottom: 40px;
+    order: 2;
+  }
+
+  .newsletter {
+    order: 1;
+    margin-bottom: 40px;
+  }
+
+  .copyright {
+    margin: 0;
+  }
+}
